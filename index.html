@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agnese Raimondi – Portfolio</title>
+<meta name="description" content="Agnese Raimondi is a Bio-artist and Designer, working with sustainable approaches, regenerative design and biomaterials.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="bar">
+  <a class="mark" href="#top">Agnese Raimondi</a>
+  <nav aria-label="Main">
+    <a href="#top" class="on">Home</a>
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#contacts">Contacts</a>
+  </nav>
+  <a class="cta" href="#contacts">→ Get in touch</a>
+</header>
+
+<main id="top">
+  <div class="cover">
+    <h1 class="brand"><b>AGNESE RAIMONDI</b><span>PORTFOLIO</span></h1>
+    <p class="intro">Agnese Raimondi is a Bio-artist and Designer, working with sustainable approaches, regenerative design and biomaterials.</p>
+    <div class="hero"><img src="images/hero.jpg" alt="Sheets of green bio-material hung to dry" onerror="this.remove()"></div>
+  </div>
+
+  <section class="blk toc" id="contents">
+    <h2>Contents</h2>
+    <div class="body">
+      <ol>
+        <li><a href="#about"><span>01</span>About me</a></li>
+        <li><a href="#methodology"><span>02</span>Methodology / process</a></li>
+        <li><a href="#materials"><span>03</span>Material library</a></li>
+        <li><a href="#workshops"><span>04</span>Workshops</a></li>
+        <li><a href="#work"><span>05</span>Work</a></li>
+        <li><a href="#contacts"><span>06</span>Contacts</a></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="blk" id="about">
+    <h2><small>01</small>About me</h2>
+    <div class="body">
+      <p>Write a short biography here: where you are based, where you studied, and what drives your practice with biomaterials and regenerative design.</p>
+      <p>Add a second paragraph about the themes you return to, and the ways you share your work (exhibitions, teaching, collaborations).</p>
+    </div>
+  </section>
+
+  <section class="blk" id="methodology">
+    <h2><small>02</small>Methodology / process</h2>
+    <div class="body">
+      <p>Describe how a project moves from idea to material: sourcing, growing or cooking, drying, testing, and reflecting on the result.</p>
+      <p>Mention the tools, living organisms and local ingredients you work with.</p>
+    </div>
+  </section>
+
+  <section class="blk" id="materials">
+    <h2><small>03</small>Material library</h2>
+    <div class="body">
+      <div class="grid">
+        <div class="tile"><div class="sw"><img src="images/material-1.jpg" alt="" onerror="this.remove()"></div><b>Algae film</b><em>Agar, glycerine</em></div>
+        <div class="tile"><div class="sw"><img src="images/material-2.jpg" alt="" onerror="this.remove()"></div><b>Material name</b><em>Ingredients</em></div>
+        <div class="tile"><div class="sw"><img src="images/material-3.jpg" alt="" onerror="this.remove()"></div><b>Material name</b><em>Ingredients</em></div>
+        <div class="tile"><div class="sw"><img src="images/material-4.jpg" alt="" onerror="this.remove()"></div><b>Material name</b><em>Ingredients</em></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk" id="workshops">
+    <h2><small>04</small>Workshops</h2>
+    <div class="body">
+      <ul class="list">
+        <li><span>2026</span><div><b>Workshop title</b><small>Venue, City</small></div></li>
+        <li><span>2025</span><div><b>Workshop title</b><small>Venue, City</small></div></li>
+        <li><span>2025</span><div><b>Workshop title</b><small>Venue, City</small></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="blk" id="work">
+    <h2><small>05</small>Work</h2>
+    <div class="body"><div class="work" id="work-grid"></div></div>
+  </section>
+
+  <section class="blk" id="contacts">
+    <h2><small>06</small>Contacts</h2>
+    <div class="body contact">
+      <a href="mailto:your@email.com">your@email.com</a>
+      <a href="https://www.instagram.com/your_handle" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot"><span>© Agnese Raimondi, 2026</span><a href="#top">Back to top</a></footer>
+
+<nav class="idx" id="idx" aria-label="Section index">
+  <a href="#about">01 About</a>
+  <a href="#methodology">02 Methodology</a>
+  <a href="#materials">03 Materials</a>
+  <a href="#workshops">04 Workshops</a>
+  <a href="#work">05 Work</a>
+  <a href="#contacts">06 Contacts</a>
+</nav>
+
+<script src="projects.js"></script>
+<script>
+(function(){
+  // Work grid, built from projects.js
+  document.getElementById("work-grid").innerHTML = PROJECTS.map(function(p, i){
+    return '<a href="project.html?p=' + p.slug + '"><figure><div class="ph"><img src="' + p.images[0] + '" alt="' + p.title + '" onerror="this.remove()"></div>' +
+      '<figcaption><b>(' + String(i + 1).padStart(2, "0") + ') ' + p.title + '</b><span>' + p.year + '</span></figcaption></figure></a>';
+  }).join("");
+
+  // Small index: appears once Contents has been scrolled past, highlights the current section
+  var idx = document.getElementById("idx"), toc = document.getElementById("contents");
+  new IntersectionObserver(function(e){
+    idx.classList.toggle("show", !e[0].isIntersecting && e[0].boundingClientRect.bottom < 0);
+  }).observe(toc);
+
+  var links = [].slice.call(idx.querySelectorAll("a"));
+  var navLinks = [].slice.call(document.querySelectorAll(".bar nav a"));
+  var topNav = {about: "#about", work: "#work", contacts: "#contacts"};
+  ["about","methodology","materials","workshops","work","contacts"].forEach(function(id){
+    var s = document.getElementById(id);
+    new IntersectionObserver(function(e){
+      if (!e[0].isIntersecting) return;
+      links.forEach(function(a){a.classList.toggle("on", a.getAttribute("href") === "#" + id)});
+      var t = topNav[id];
+      if (t) navLinks.forEach(function(a){a.classList.toggle("on", a.getAttribute("href") === t)});
+    }, {rootMargin: "-45% 0px -50% 0px"}).observe(s);
+  });
+})();
+</script>
+</body>
+</html>

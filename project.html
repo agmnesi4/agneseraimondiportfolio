@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Work – Agnese Raimondi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="bar">
+  <a class="mark" href="index.html">Agnese Raimondi</a>
+  <nav aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#work" class="on">Work</a>
+    <a href="index.html#contacts">Contacts</a>
+  </nav>
+  <a class="cta" href="index.html#contacts">→ Get in touch</a>
+</header>
+
+<main id="p"></main>
+
+<script src="projects.js"></script>
+<script>
+(function(){
+  var slug = new URLSearchParams(location.search).get("p");
+  var i = PROJECTS.findIndex(function(x){return x.slug === slug});
+  if (i < 0) i = 0;
+  var p = PROJECTS[i], n = PROJECTS[(i + 1) % PROJECTS.length];
+  document.title = p.title + " – Agnese Raimondi";
+
+  var html = '<div class="phead">' +
+    '<div><a class="back" href="index.html#work" aria-label="Back to work">←</a><h1>' + p.title + '</h1></div>' +
+    '<div class="meta"><div><p class="lab">Focus</p>' + p.focus.map(function(f){return '<p>' + f + '</p>'}).join("") + '</div>' +
+    '<div><p class="lab">Location</p><p>' + p.location + '</p></div></div>' +
+    '<div class="desc"><p class="lab">Description</p>' + p.description.map(function(d){return '<p>' + d + '</p>'}).join("") + '</div>' +
+  '</div><div class="rows">';
+
+  for (var k = 0; k < p.images.length; k += 2) {
+    var even = (k / 2) % 2 === 0;
+    html += '<div class="row ' + (even ? "a" : "b") + '">';
+    [k, k + 1].forEach(function(j, pos){
+      if (j >= p.images.length) return;
+      var small = even ? pos === 0 : pos === 1;
+      var num = "(" + String(j + 1).padStart(2, "0") + ")";
+      html += '<figure class="' + (small ? "s" : "l") + '"><div class="ph"><img src="' + p.images[j] + '" alt="' + p.title + ' ' + num + '" onerror="this.remove()"></div><figcaption>' + num + '</figcaption></figure>';
+    });
+    html += '</div>';
+  }
+  html += '</div><a class="next" href="project.html?p=' + n.slug + '"><small>Next project</small>' + n.title + ' →</a>' +
+    '<footer class="foot"><span>© Agnese Raimondi, 2026</span><a href="index.html">Back to home</a></footer>';
+  document.getElementById("p").innerHTML = html;
+})();
+</script>
+</body>
+</html>
