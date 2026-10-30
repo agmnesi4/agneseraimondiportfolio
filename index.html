@@ -26,7 +26,7 @@
 <main id="top">
   <div class="cover">
     <h1 class="brand"><b>AGNESE RAIMONDI</b><span>PORTFOLIO</span></h1>
-    <p class="intro">Agnese Raimondi is an artist and designer, working betwwen co-creation with nature and regenerative design.</p>
+    <p class="intro">Agnese Raimondi is a Bio-artist and Designer, working with sustainable approaches, regenerative design and biomaterials.</p>
     <div class="hero"><img src="images/hero.jpg" alt="Sheets of green bio-material hung to dry" onerror="this.remove()"></div>
   </div>
 
@@ -83,16 +83,16 @@
     </div>
   </section>
 
-  <section class="blk" id="work">
+  <section class="blk wide" id="work">
     <h2><small>05</small>Work</h2>
-    <div class="body"><div class="work" id="work-grid"></div></div>
+    <div class="body" id="work-grid"></div>
   </section>
 
   <section class="blk" id="contacts">
     <h2><small>06</small>Contacts</h2>
     <div class="body contact">
-      <a href="mailto:agneseraimondi13@email.com">agneseraimondi13@email.com</a>
-      <a href="https://www.instagram.com/agmnesia/" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:your@email.com">your@email.com</a>
+      <a href="https://www.instagram.com/your_handle" target="_blank" rel="noopener">Instagram</a>
     </div>
   </section>
 </main>
@@ -113,8 +113,13 @@
 (function(){
   // Work grid, built from projects.js
   document.getElementById("work-grid").innerHTML = PROJECTS.map(function(p, i){
-    return '<a href="project.html?p=' + p.slug + '"><figure><div class="ph"><img src="' + p.images[0] + '" alt="' + p.title + '" onerror="this.remove()"></div>' +
-      '<figcaption><b>(' + String(i + 1).padStart(2, "0") + ') ' + p.title + '</b><span>' + p.year + '</span></figcaption></figure></a>';
+    var n = Math.min(p.preview || 3, p.images.length);
+    var thumbs = p.images.slice(0, n).map(function(src){
+      return '<div class="ph"><img src="' + src + '" alt="" onerror="this.remove()"></div>';
+    }).join("");
+    return '<a class="wk" href="project.html?p=' + p.slug + '">' +
+      '<div class="wk-h"><b>(' + String(i + 1).padStart(2, "0") + ') ' + p.title + '</b><span>' + p.year + '</span></div>' +
+      '<div class="wk-r" style="--n:' + n + '">' + thumbs + '</div></a>';
   }).join("");
 
   // Small index: appears once Contents has been scrolled past, highlights the current section

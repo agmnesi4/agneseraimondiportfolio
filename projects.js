@@ -1,7 +1,7 @@
 /* I TUOI PROGETTI
    Per aggiungerne uno: copia un blocco { ... }, cambia i testi e i nomi delle immagini.
    "slug" = nome breve nell'indirizzo (solo minuscole e trattini).
-   Le immagini vanno nella cartella images/work/ */
+   Le immagini vanno nella cartella images/project/ */
 const PROJECTS = [
   {
     slug: "project-one",
@@ -13,7 +13,8 @@ const PROJECTS = [
       "Write the first paragraph about this project here: the idea, the material and the question behind it.",
       "Write the second paragraph here: how the work developed, what you learned and where it was shown."
     ],
-    images: ["images/work/project-one-1.jpg", "images/work/project-one-2.jpg", "images/work/project-one-3.jpg", "images/work/project-one-4.jpg"]
+    preview: 3, // quante immagini mostrare come anteprima nella home (le prime della lista)
+    images: ["images/project/project-one-1.jpg", "images/project/project-one-2.jpg", "images/project/project-one-3.jpg", "images/project/project-one-4.jpg"]
   },
   {
     slug: "project-two",
@@ -25,7 +26,7 @@ const PROJECTS = [
       "First paragraph of the second project.",
       "Second paragraph of the second project."
     ],
-    images: ["images/work/project-two-1.jpg", "images/work/project-two-2.jpg"]
+    images: ["images/project/project-two-1.jpg", "images/project/project-two-2.jpg"]
   },
   {
     slug: "project-three",
@@ -37,6 +38,6 @@ const PROJECTS = [
       "First paragraph of the third project.",
       "Second paragraph of the third project."
     ],
-    images: ["images/work/project-three-1.jpg", "images/work/project-three-2.jpg"]
+    images: ["images/project/project-three-1.jpg", "images/project/project-three-2.jpg"]
   }
 ];
