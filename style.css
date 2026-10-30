@@ -1,9 +1,9 @@
 :root{
-  --paper:#f6f4ee;
-  --ink:#2b2b18;
+  --paper:#ffffff; 
+  --ink:#333333;
   --olive:#6f7c47;
-  --mute:#9b9b8c;
-  --soft:#e7e4d8;
+  --mute:#9a9a9a;
+  --soft:#efefef;
   --pad:clamp(22px,5.5vw,80px);
   --gap:10px;
   --col:38%;
