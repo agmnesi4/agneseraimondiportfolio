@@ -27,12 +27,13 @@
   <div class="cover">
     <h1 class="brand"><b>AGNESE RAIMONDI</b><span>PORTFOLIO</span></h1>
     <p class="intro">multidisciplinary artist and designer</p>
-<div class="hero">
-  <iframe src="https://player.vimeo.com/video/1244263925?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1&amp;background=1"
-          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          title="MOLD WILL GROW ON YOU"></iframe>
-</div>
+    <div class="hero">
+      <iframe src="https://player.vimeo.com/video/1244263925?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1&amp;background=1"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              title="MOLD WILL GROW ON YOU"></iframe>
+    </div>
+  </div>
 
   <section class="blk toc" id="contents">
     <h2>Contents</h2>
@@ -40,9 +41,9 @@
       <ol>
         <li><a href="#about"><span>01</span>About me</a></li>
         <li><a href="#methodology"><span>02</span>Methodology / process</a></li>
-        <li><a href="#materials"><span>03</span>Material library</a></li>
+        <li><a href="#work"><span>03</span>Work</a></li>
         <li><a href="#workshops"><span>04</span>Workshops</a></li>
-        <li><a href="#work"><span>05</span>Work</a></li>
+        <li><a href="#materials"><span>05</span>Material library</a></li>
         <li><a href="#contacts"><span>06</span>Contacts</a></li>
       </ol>
     </div>
@@ -64,16 +65,9 @@
     </div>
   </section>
 
-  <section class="blk" id="materials">
-    <h2><small>03</small>Material library</h2>
-    <div class="body">
-      <div class="grid">
-        <div class="tile"><div class="sw"><img src="images/material-1.jpg" alt="" onerror="this.remove()"></div><b>Algae film</b><em>Agar, glycerine</em></div>
-        <div class="tile"><div class="sw"><img src="images/material-2.jpg" alt="" onerror="this.remove()"></div><b>Material name</b><em>Ingredients</em></div>
-        <div class="tile"><div class="sw"><img src="images/material-3.jpg" alt="" onerror="this.remove()"></div><b>Material name</b><em>Ingredients</em></div>
-        <div class="tile"><div class="sw"><img src="images/material-4.jpg" alt="" onerror="this.remove()"></div><b>Material name</b><em>Ingredients</em></div>
-      </div>
-    </div>
+  <section class="blk wide" id="work">
+    <h2><small>03</small>Work</h2>
+    <div class="body" id="work-grid"></div>
   </section>
 
   <section class="blk" id="workshops">
@@ -87,9 +81,16 @@
     </div>
   </section>
 
-  <section class="blk wide" id="work">
-    <h2><small>05</small>Work</h2>
-    <div class="body" id="work-grid"></div>
+  <section class="blk" id="materials">
+    <h2><small>05</small>Material library</h2>
+    <div class="body">
+      <div class="grid">
+        <div class="tile"><div class="sw"><img src="images/material-1.jpg" alt="" onerror="this.remove()"></div><b>Algae film</b><em>Agar, glycerine</em></div>
+        <div class="tile"><div class="sw"><img src="images/material-2.jpg" alt="" onerror="this.remove()"></div><b>Material name</b><em>Ingredients</em></div>
+        <div class="tile"><div class="sw"><img src="images/material-3.jpg" alt="" onerror="this.remove()"></div><b>Material name</b><em>Ingredients</em></div>
+        <div class="tile"><div class="sw"><img src="images/material-4.jpg" alt="" onerror="this.remove()"></div><b>Material name</b><em>Ingredients</em></div>
+      </div>
+    </div>
   </section>
 
   <section class="blk" id="contacts">
@@ -106,9 +107,9 @@
 <nav class="idx" id="idx" aria-label="Section index">
   <a href="#about">01 About</a>
   <a href="#methodology">02 Methodology</a>
-  <a href="#materials">03 Materials</a>
+  <a href="#work">03 Work</a>
   <a href="#workshops">04 Workshops</a>
-  <a href="#work">05 Work</a>
+  <a href="#materials">05 Materials</a>
   <a href="#contacts">06 Contacts</a>
 </nav>
 
@@ -135,7 +136,7 @@
   var links = [].slice.call(idx.querySelectorAll("a"));
   var navLinks = [].slice.call(document.querySelectorAll(".bar nav a"));
   var topNav = {about: "#about", work: "#work", contacts: "#contacts"};
-  ["about","methodology","materials","workshops","work","contacts"].forEach(function(id){
+  ["about","methodology","work","workshops","materials","contacts"].forEach(function(id){
     var s = document.getElementById(id);
     new IntersectionObserver(function(e){
       if (!e[0].isIntersecting) return;
