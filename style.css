@@ -112,3 +112,13 @@ section.blk{display:grid;grid-template-columns:var(--col) 1fr;gap:var(--gap);pad
   .wk-r{grid-template-columns:1fr 1fr}
   .wk-r .ph:nth-child(n+3){display:none}
 }
+
+/* Prima schermata a tutta altezza: i Contents partono sotto */
+main#top > :first-child{min-height:100vh;min-height:100svh}
+
+/* Comparsa morbida mentre si scorre */
+.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .js .reveal{opacity:1;transform:none;transition:none}
+}
