@@ -121,4 +121,8 @@ main#top > :first-child{min-height:100vh;min-height:100svh}
 .js .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){
   .js .reveal{opacity:1;transform:none;transition:none}
+  /* Titolo con gerarchia: nome grande, frase più piccola */
+.lead{font-size:clamp(44px,6.2vw,96px);font-weight:800;letter-spacing:-.045em;line-height:1;max-width:14em}
+.lead .name{display:block;color:var(--olive);margin-bottom:.3em}
+.lead .rest{display:block;color:var(--ink);font-size:.5em;font-weight:400;letter-spacing:-.03em;line-height:1.15;max-width:22em}
 }
