@@ -58,22 +58,24 @@ img{display:block;max-width:100%}
 }
 .cover-text{display:flex;flex-direction:column;gap:24px}
 
-/* Titolo: nome grande in verde, frase più piccola e leggera */
+/* Titolo: tutto in verde oliva, grassetto */
 .lead{
-  font-size:clamp(38px,5vw,80px);           /* grandezza del nome */
+  font-size:clamp(34px,4.4vw,70px);         /* grandezza (prima era 5vw / 80px) */
   font-weight:800;
   letter-spacing:-.045em;
   line-height:1;
+  color:var(--olive);
 }
-.lead .name{display:block;color:var(--olive);margin-bottom:.3em}
+.lead .name,
 .lead .rest{
-  display:block;
-  color:var(--ink);
-  font-size:.5em;                           /* metà del nome */
-  font-weight:400;
-  letter-spacing:-.03em;
-  line-height:1.15;
-  max-width:22em;
+  display:inline;                           /* nome e frase scorrono come un testo solo */
+  color:var(--olive);
+  font-size:1em;
+  font-weight:800;
+  letter-spacing:inherit;
+  line-height:inherit;
+  margin:0;
+  max-width:none;
 }
 
 .hero{
