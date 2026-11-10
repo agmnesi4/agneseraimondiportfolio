@@ -7,7 +7,7 @@ const PROJECTS = [
     slug: "project-one",
     title: "Biofabricated Roots Textile",
     year: "2026",
-    focus: ["Biofabrication", "Regenerative design", "Installation"],
+    focus: ["Biofabrication", "Regenerative design", "Co-creation"],
     location: "Developed in Rome, Italy",
 description: [
       "This project grew out of a course on root biofabrication by Bastian Díaz Jerez, where we worked with roots as living systems, capable of growing, organising themselves and responding to the environment they develop in. It is a field that is still little explored. One example I can point to is Rootfull, the London-based project by Zena Holloway, which grows wheatgrass roots into templates carved from beeswax to make lamps, wall hangings and garments.",
