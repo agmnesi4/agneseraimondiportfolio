@@ -128,7 +128,7 @@
       return '<div class="ph"><img src="' + src + '" alt="" onerror="this.remove()"></div>';
     }).join("");
     return '<a class="wk" href="project.html?p=' + p.slug + '">' +
-      '<div class="wk-h"><b>(' + String(i + 1).padStart(2, "0") + ') ' + p.title + '</b><span>' + p.year + '</span></div>' +
+      '<div class="wk-h"><b>' + p.title + '</b><span>' + p.year + '</span></div>' +
       '<div class="wk-r" style="--n:' + n + '">' + thumbs + '</div></a>';
   }).join("");
 
