@@ -46,8 +46,7 @@
         <li><a href="#methodology"><span>02</span>Methodology / process</a></li>
         <li><a href="#work"><span>03</span>Work</a></li>
         <li><a href="#workshops"><span>04</span>Workshops</a></li>
-        <li><a href="#materials"><span>05</span>Material library</a></li>
-        <li><a href="#contacts"><span>06</span>Contacts</a></li>
+        <li><a href="#contacts"><span>05</span>Contacts</a></li>
       </ol>
     </div>
   </section>
@@ -73,6 +72,82 @@
   <section class="blk wide" id="work">
     <h2><small>03</small>Work</h2>
     <div class="body" id="work-grid"></div>
+
+    <!-- MASTER IN DESIGN FOR EMERGENT FUTURES: scrivi qui i tuoi testi -->
+    <div class="master" id="master">
+
+      <div class="m-intro">
+        <h3>Master in Design for Emergent Futures<small>Barcelona, 20XX – 20XX</small></h3>
+        <p>[Scrivi qui un paragrafo su cosa hai imparato a fare durante il master: metodi di ricerca, competenze, modo di lavorare.]</p>
+      </div>
+
+      <p class="lab">Selected projects</p>
+
+      <!-- Progetto 1: testo a sinistra, foto a destra -->
+      <article class="mp">
+        <div class="mp-text">
+          <h4>Project name</h4>
+          <span>2025</span>
+          <p>[Breve descrizione del progetto: cosa hai fatto e perché.]</p>
+        </div>
+        <div class="mp-ph">
+          <div class="ph"><img src="images/master/project-1-a.jpg" alt="" onerror="this.remove()"></div>
+          <div class="ph"><img src="images/master/project-1-b.jpg" alt="" onerror="this.remove()"></div>
+        </div>
+      </article>
+
+      <!-- Progetto 2: "flip" = testo a destra, foto a sinistra -->
+      <article class="mp flip">
+        <div class="mp-text">
+          <h4>Project name</h4>
+          <span>2025</span>
+          <p>[Breve descrizione del progetto: cosa hai fatto e perché.]</p>
+        </div>
+        <div class="mp-ph">
+          <div class="ph"><img src="images/master/project-2-a.jpg" alt="" onerror="this.remove()"></div>
+          <div class="ph"><img src="images/master/project-2-b.jpg" alt="" onerror="this.remove()"></div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- BA IN FASHION AND COSTUME DESIGN: stessa struttura del master, cambiano solo id e testi -->
+    <div class="master" id="ba">
+
+      <div class="m-intro">
+        <h3>BA in Fashion and Costume Design<small>City, 20XX – 20XX</small></h3>
+        <p>[Scrivi qui un paragrafo su cosa hai imparato a fare durante il BA: tecniche sartoriali, lavoro sui materiali, costumi, ecc.]</p>
+      </div>
+
+      <p class="lab">Selected projects</p>
+
+      <!-- Progetto 1: testo a sinistra, foto a destra -->
+      <article class="mp">
+        <div class="mp-text">
+          <h4>Project name</h4>
+          <span>20XX</span>
+          <p>[Breve descrizione del progetto: cosa hai fatto e perché.]</p>
+        </div>
+        <div class="mp-ph">
+          <div class="ph"><img src="images/ba/project-1-a.jpg" alt="" onerror="this.remove()"></div>
+          <div class="ph"><img src="images/ba/project-1-b.jpg" alt="" onerror="this.remove()"></div>
+        </div>
+      </article>
+
+      <!-- Progetto 2: "flip" = testo a destra, foto a sinistra -->
+      <article class="mp flip">
+        <div class="mp-text">
+          <h4>Project name</h4>
+          <span>20XX</span>
+          <p>[Breve descrizione del progetto: cosa hai fatto e perché.]</p>
+        </div>
+        <div class="mp-ph">
+          <div class="ph"><img src="images/ba/project-2-a.jpg" alt="" onerror="this.remove()"></div>
+          <div class="ph"><img src="images/ba/project-2-b.jpg" alt="" onerror="this.remove()"></div>
+        </div>
+      </article>
+
+    </div>
   </section>
 
   <section class="blk" id="workshops">
@@ -86,20 +161,8 @@
     </div>
   </section>
 
-  <section class="blk" id="materials">
-    <h2><small>05</small>Material library</h2>
-    <div class="body">
-      <div class="grid">
-        <div class="tile"><div class="sw"><img src="images/material-1.jpg" alt="" onerror="this.remove()"></div><b>Algae film</b><em>Agar, glycerine</em></div>
-        <div class="tile"><div class="sw"><img src="images/material-2.jpg" alt="" onerror="this.remove()"></div><b>Material name</b><em>Ingredients</em></div>
-        <div class="tile"><div class="sw"><img src="images/material-3.jpg" alt="" onerror="this.remove()"></div><b>Material name</b><em>Ingredients</em></div>
-        <div class="tile"><div class="sw"><img src="images/material-4.jpg" alt="" onerror="this.remove()"></div><b>Material name</b><em>Ingredients</em></div>
-      </div>
-    </div>
-  </section>
-
   <section class="blk" id="contacts">
-    <h2><small>06</small>Contacts</h2>
+    <h2><small>05</small>Contacts</h2>
     <div class="body contact">
       <a href="mailto:your@email.com">agneseraimondi13@gmail.com</a>
       <a href="https://www.instagram.com/agmnesia/" target="_blank" rel="noopener">Instagram</a>
@@ -115,8 +178,7 @@
   <a href="#methodology">02 Methodology</a>
   <a href="#work">03 Work</a>
   <a href="#workshops">04 Workshops</a>
-  <a href="#materials">05 Materials</a>
-  <a href="#contacts">06 Contacts</a>
+  <a href="#contacts">05 Contacts</a>
 </nav>
 
 <script src="projects.js"></script>
@@ -142,7 +204,7 @@
   var links = [].slice.call(idx.querySelectorAll("a"));
   var navLinks = [].slice.call(document.querySelectorAll(".bar nav a"));
   var topNav = {about: "#about", work: "#work", contacts: "#contacts"};
-  ["about","methodology","work","workshops","materials","contacts"].forEach(function(id){
+  ["about","methodology","work","workshops","contacts"].forEach(function(id){
     var s = document.getElementById(id);
     new IntersectionObserver(function(e){
       if (!e[0].isIntersecting) return;

@@ -112,12 +112,6 @@ section.blk{
 }
 .toc li span{display:inline-block;width:2.1em}
 
-/* Material library */
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:var(--gap)}
-.tile .sw{aspect-ratio:1;background:var(--soft);margin-bottom:8px;overflow:hidden}
-.tile b{display:block;font-weight:700}
-.tile em{font-style:normal;font-size:13px;color:var(--mute)}
-
 /* Workshops */
 .list{list-style:none}
 .list li{display:grid;grid-template-columns:5.5em 1fr;gap:12px;padding:10px 0}
@@ -147,8 +141,32 @@ section.blk{
 .wk-r{display:grid;grid-template-columns:repeat(var(--n,3),1fr);gap:var(--gap)}
 .wk .ph{aspect-ratio:3/2;background:var(--soft);overflow:hidden}
 .wk .ph img{transition:transform .5s}
-.wk:hover .ph img{transform:scale(1.03)}
-.wk:hover .wk-h{color:var(--olive)}
+@media (hover:hover){                           /* solo con il mouse: su touch l'hover resterebbe "bloccato" dopo il tocco */
+  .wk:hover .ph img{transform:scale(1.03)}
+  .wk:hover .wk-h{color:var(--olive)}
+}
+
+/* ---------- 6b. MASTER (dentro Work) ---------- */
+.master{margin-top:clamp(60px,9vw,120px)}
+
+/* Introduzione: titolo a sinistra, paragrafo a destra (stessa griglia delle altre sezioni) */
+.m-intro,.mp{display:grid;grid-template-columns:var(--col) 1fr;gap:var(--gap)}
+.m-intro h3{font-size:clamp(24px,3vw,44px);font-weight:400;letter-spacing:-.04em;line-height:1}
+.m-intro h3 small{display:block;margin-top:10px;font-size:14px;letter-spacing:0;color:var(--mute)}
+.m-intro p{max-width:60ch;font-size:16px}
+.master .lab{margin:clamp(40px,6vw,80px) 0 16px}
+
+/* Progetto selezionato: colonna di testo + due foto affiancate */
+.mp{align-items:start;margin-bottom:clamp(40px,6vw,80px)}
+.mp-text h4{font-size:clamp(20px,2vw,28px);font-weight:700;letter-spacing:-.02em;line-height:1.1}
+.mp-text span{display:block;margin:6px 0 14px;font-size:13px;color:var(--mute)}
+.mp-text p{max-width:42ch}
+.mp-ph{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap)}
+.mp .ph{aspect-ratio:4/5;background:var(--soft);overflow:hidden}   /* forma delle foto: cambia qui */
+
+/* "flip": inverte i lati (testo a destra). order:2 sposta il testo dopo le foto */
+.mp.flip{grid-template-columns:1fr var(--col)}
+.mp.flip .mp-text{order:2}
 
 /* ---------- 7. PAGINA PROGETTO ---------- */
 .back{display:block;margin-bottom:14px;font-size:30px;font-weight:200;line-height:1;color:var(--mute)}
@@ -206,6 +224,18 @@ section.blk{
   .js .reveal{opacity:1;transform:none;transition:none}
 }
 
+/* ---------- 9b. IPAD E SCHERMI MEDI ---------- */
+@media (min-width:761px) and (max-width:1100px){
+  .meta p,.desc p{font-size:13.5px}             /* testi della pagina progetto un po' più leggibili */
+}
+
+/* ---------- 9c. DISPOSITIVI TOUCH (iPad e telefono) ---------- */
+@media (pointer:coarse){
+  .idx{gap:4px;padding:4px 10px}
+  .idx a{padding:13px 8px}                      /* area di tocco più comoda (~44px di altezza) */
+  .bar .cta{padding:8px 0}
+}
+
 /* ---------- 10. TELEFONO (sempre in fondo) ---------- */
 @media (max-width:760px){
   :root{--col:100%}
@@ -219,4 +249,9 @@ section.blk{
   .row.b .l{order:-1}
   .wk-r{grid-template-columns:1fr 1fr}
   .wk-r .ph:nth-child(n+3){display:none}
+  .meta p,.desc p{font-size:14px}       /* 12.5px è troppo piccolo su un telefono */
+  .idx .t{display:none}                 /* indice progetti: sul telefono solo i numeri... */
+  .idx a.on .t{display:inline}          /* ...e il titolo del progetto aperto */
+  .m-intro,.mp,.mp.flip{grid-template-columns:1fr}
+  .mp.flip .mp-text{order:0}
 }
