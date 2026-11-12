@@ -42,6 +42,6 @@ description: [
       "Today it is an ongoing practice. I work with bioplastics, biocomposites and bioceramics made from natural ingredients, coloured with natural dyes, and I keep testing and documenting the results between Rome, Barcelona and Berlin.",
       "If you want to know more about it, or you are interested in a consultancy, <a href='index.html#contacts'>contact me</a>. Below you can see some of my work."
     ],
-    images: ["images/project/project-three-1.jpg", "images/project/project-three-2.jpg"]
+    images: ["images/project/projecthree-1.jpg", "images/project/projecthree-2.jpg", "images/project/projecthree-3.jpg", "images/project/projecthree-4.jpg", "images/project/projecthree-5.jpg", "images/project/projecthree-6.jpg"]
   }
 ];
