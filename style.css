@@ -213,6 +213,7 @@ section.blk{
 .meta p,.desc p{font-size:12.5px;line-height:1.32}
 .meta div+div{margin-top:30px}
 .desc p+p{margin-top:1.4em}
+.desc a{text-decoration:underline;text-underline-offset:3px}   /* link dentro la descrizione */
 
 .rows{padding:0 var(--pad)}
 .row{

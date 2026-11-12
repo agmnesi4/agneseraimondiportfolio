@@ -38,8 +38,9 @@ description: [
     focus: ["Biomaterials", "Material research"],
     location: "Researched between Rome, Barcelona and Berlin",
     description: [
-      "First paragraph of the third project.",
-      "Second paragraph of the third project."
+      "My biomaterial research began with my BA thesis, and since then I have never stopped. I started by experimenting with open source recipes, and by testing them again and again I learned the properties of the materials: how they dry, how they take colour, how they hold together.",
+      "Today it is an ongoing practice. I work with bioplastics, biocomposites and bioceramics made from natural ingredients, coloured with natural dyes, and I keep testing and documenting the results between Rome, Barcelona and Berlin.",
+      "If you want to know more about it, or you are interested in a consultancy, <a href='index.html#contacts'>contact me</a>. Below you can see some of my work."
     ],
     images: ["images/project/project-three-1.jpg", "images/project/project-three-2.jpg"]
   }
