@@ -54,6 +54,14 @@
   html += '</div><a class="next" href="project.html?p=' + n.slug + '"><small>Next project</small>' + n.title + ' →</a>' +
     '<footer class="foot"><span>© Agnese Raimondi, 2026</span><a href="index.html">Back to home</a></footer>';
   document.getElementById("p").innerHTML = html;
+
+  // Barretta fissa in basso: un link per ogni progetto, quello aperto in evidenza.
+  // Usa le classi .idx / .show già presenti in style.css (le stesse della home).
+  var nav = '<nav class="idx show" aria-label="Projects">' + PROJECTS.map(function(q, j){
+    return '<a href="project.html?p=' + q.slug + '"' + (j === i ? ' class="on" aria-current="page"' : '') + '>' +
+      String(j + 1).padStart(2, "0") + ' <span class="t">' + q.title + '</span></a>';
+  }).join("") + '</nav>';
+  document.body.insertAdjacentHTML("beforeend", nav);
 })();
 </script>
 </body>

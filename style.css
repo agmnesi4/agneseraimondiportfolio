@@ -193,6 +193,8 @@ section.blk{
 .mp-text h4{font-size:clamp(20px,2vw,28px);font-weight:700;letter-spacing:-.02em;line-height:1.1}
 .mp-text span{display:block;margin:6px 0 14px;font-size:13px;color:var(--mute)}
 .mp-text p{max-width:42ch}
+.mp-text p+p{margin-top:1em}
+.mp-text a{text-decoration:underline;text-underline-offset:3px}   /* link esterni: sottolineati come "Get in touch" */
 .mp-ph{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap)}
 .mp .ph{aspect-ratio:4/5;background:var(--soft);overflow:hidden}   /* forma delle foto: cambia qui */
 
