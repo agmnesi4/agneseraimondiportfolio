@@ -20,7 +20,7 @@ description: [
     slug: "project-two",
     title: "Natural Dyes",
     year: "2021 - PRESENT",
-    focus: ["Natural Dyes", "Ancient Techniques", "Research"],
+    focus: ["Natural Dyes", "Ancient Techniques"],
     location: "Developed in different countries: Italy, Spain and Portugal",
     description: [
     "My first contact with natural colours was when I was a child, and it has slowly become a central part of my practice. Natural dyeing simply means colouring fabric with materials that come from nature rather than from synthetic dyes: leaves, roots, bark, mushrooms and flowers, and also things we usually throw away, like onion skins or avocado stones. It is one of the oldest textile practices there is.",
@@ -33,10 +33,10 @@ description: [
   },
   {
     slug: "project-three",
-    title: "Project Three",
-    year: "2024",
-    focus: ["Collaboration", "Material research"],
-    location: "City, Country",
+    title: "Biomaterials research",
+    year: "2024 - present",
+    focus: ["Biomaterials", "Material research"],
+    location: "Researched between Rome, Barcelona and Berlin",
     description: [
       "First paragraph of the third project.",
       "Second paragraph of the third project."
