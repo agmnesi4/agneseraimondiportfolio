@@ -17,9 +17,9 @@
     <a href="index.html">Home</a>
     <a href="index.html#about">About</a>
     <a href="index.html#work" class="on">Work</a>
-    <a href="index.html#contacts">Contacts</a>
+    <a href="contact.html">Contacts</a>
   </nav>
-  <a class="cta" href="index.html#contacts">→ Get in touch</a>
+  <a class="cta" href="contact.html">→ Get in touch</a>
 </header>
 
 <main id="p"></main>
@@ -30,7 +30,7 @@
   var slug = new URLSearchParams(location.search).get("p");
   var i = PROJECTS.findIndex(function(x){return x.slug === slug});
   if (i < 0) i = 0;
-  var p = PROJECTS[i], n = PROJECTS[(i + 1) % PROJECTS.length];
+  var p = PROJECTS[i];
   document.title = p.title + " – Agnese Raimondi";
 
   var html = '<div class="phead">' +
@@ -51,7 +51,7 @@
     });
     html += '</div>';
   }
-  html += '</div><a class="next" href="project.html?p=' + n.slug + '"><small>Next project</small>' + n.title + ' →</a>' +
+  html += '</div>' +
     '<footer class="foot"><span>© Agnese Raimondi, 2026</span><a href="index.html">Back to home</a></footer>';
   document.getElementById("p").innerHTML = html;
 

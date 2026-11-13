@@ -60,7 +60,7 @@ img{display:block;max-width:100%}
 
 /* Titolo: tutto in verde oliva, grassetto */
 .lead{
-  font-size:clamp(34px,4.4vw,70px);         /* grandezza (prima era 5vw / 80px) */
+  font-size:clamp(26px,3.2vw,48px);         /* grandezza: minimo, ideale, massimo (prima 34px / 4.4vw / 70px) */
   font-weight:800;
   letter-spacing:-.045em;
   line-height:1;
@@ -118,9 +118,9 @@ section.blk{
 .list span{color:var(--mute)}
 .list b{font-weight:700}
 .list small{display:block;font-size:13px;color:var(--mute)}
+.list a{text-decoration:underline;text-underline-offset:3px}   /* link del workshop: sottolineato, perché su telefono non esiste l'hover */
 
-/* Contacts e footer */
-.contact a{display:block;font-size:clamp(22px,2.4vw,34px);font-weight:400;letter-spacing:-.02em}
+/* Footer */
 .foot{
   display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
   padding:80px var(--pad) 90px;
@@ -147,7 +147,12 @@ section.blk{
 }
 
 /* ---------- 6b. EDUCATION (tendine Master e BA, dentro Work) ---------- */
-.blk.wide>.lab{margin:clamp(40px,6vw,80px) 0 12px}      /* etichetta "Education" */
+.blk.wide>.lab{
+  margin:clamp(40px,6vw,80px) 0 12px;
+  font-size:clamp(16px,1.6vw,22px);          /* più grande (prima 11px) */
+  font-weight:800;letter-spacing:.14em;text-transform:uppercase;   /* stesso stile dei titoli di sezione */
+  color:var(--ink);                          /* grigio scuro invece del grigio chiaro */
+}
 
 .master{border-top:1px solid #d8d8d8}                  /* linea sottile: separa le righe */
 .master:last-child{border-bottom:1px solid #d8d8d8}
@@ -202,6 +207,42 @@ section.blk{
 .mp.flip{grid-template-columns:1fr var(--col)}
 .mp.flip .mp-text{order:2}
 
+/* ---------- 6c. RIGA BA (sotto il Master) ---------- */
+/* Stessa impostazione del Master (titolo a sinistra, testo a destra), ma senza tendina */
+.edu-note{
+  display:grid;grid-template-columns:var(--col) 1fr;gap:var(--gap);
+  padding:22px 0;
+}
+.edu-note h3{font-size:clamp(24px,3vw,44px);font-weight:400;letter-spacing:-.04em;line-height:1}
+.edu-note h3 small{display:block;margin-top:10px;font-size:14px;letter-spacing:0;color:var(--mute)}
+.edu-note p{max-width:60ch;font-size:16px}
+.edu-note a{text-decoration:underline;text-underline-offset:3px}
+
+/* ---------- 6d. PAGINA CONTACTS (contact.html) ---------- */
+.c-block{margin-bottom:clamp(32px,4.5vw,56px)}
+.c-block:last-child{margin-bottom:0}
+.c-block .lab{margin-bottom:12px}                      /* etichette piccole e grigie sopra ogni gruppo */
+
+.body .c-lead{                                         /* frase di apertura */
+  max-width:36ch;
+  font-size:clamp(20px,2vw,28px);font-weight:400;letter-spacing:-.03em;line-height:1.15;
+  margin-bottom:0;
+}
+.body .c-big{                                          /* "Berlin, Rome and Barcelona" e social */
+  max-width:none;
+  font-size:clamp(16px,1.5vw,20px);font-weight:400;letter-spacing:-.01em;line-height:1.3;
+  margin-bottom:0;
+}
+.c-soc{display:flex;flex-wrap:wrap;gap:6px 28px}
+.c-big a{text-decoration:underline;text-underline-offset:4px}   /* email e social: sottolineati, così si capisce che si toccano */
+.c-lead+.c-big{margin-top:20px}                        /* spazio tra il messaggio e l'email */
+
+/* Footer in fondo alla pagina Contacts: il body diventa una colonna alta almeno quanto lo schermo,
+   il contenuto (main) si prende lo spazio libero e spinge il footer verso il basso */
+.contact-page{min-height:100vh;min-height:100svh;display:flex;flex-direction:column}
+.contact-page main{flex:1}
+
+
 /* ---------- 7. PAGINA PROGETTO ---------- */
 .back{display:block;margin-bottom:14px;font-size:30px;font-weight:200;line-height:1;color:var(--mute)}
 .phead{
@@ -225,8 +266,6 @@ section.blk{
 .row .ph{height:var(--h);background:var(--soft);overflow:hidden}
 .row figcaption{margin:6px 0 18px;font-size:16px;font-weight:300;color:var(--mute)}
 
-.next{display:block;padding:70px var(--pad) 0;font-size:clamp(28px,4vw,56px);letter-spacing:-.04em;line-height:1}
-.next small{display:block;margin-bottom:10px;font-size:12px;letter-spacing:0;color:var(--mute)}
 
 /* ---------- 8. INDICE FISSO (compare dopo i Contents) ---------- */
 .idx{
@@ -288,9 +327,10 @@ section.blk{
   .meta p,.desc p{font-size:14px}       /* 12.5px è troppo piccolo su un telefono */
   .idx .t{display:none}                 /* indice progetti: sul telefono solo i numeri... */
   .idx a.on .t{display:inline}          /* ...e il titolo del progetto aperto */
-  .master summary,.m-text,.mp,.mp.flip{grid-template-columns:1fr}
+  .master summary,.m-text,.mp,.mp.flip,.edu-note{grid-template-columns:1fr}
   .master summary>*,.master summary h3{grid-column:1;grid-row:auto}
   .master summary h3{margin-bottom:10px}
+  .edu-note h3{margin-bottom:10px}
   .m-text .body{grid-column:1}
   .mp.flip .mp-text{order:0}
 }

@@ -27,7 +27,7 @@ description: [
     "I first encountered it in the Marche, a region in central Italy, where woad and natural dyes were central for a very long time. Woad is a plant whose leaves give a deep blue, the same pigment found in indigo, and for centuries it was the main source of blue in Europe. My grandmother, a seamstress, came from that area, and spending all my summers there since I was a child deeply influenced my practice.",
     "I’ve always experimented with natural dyes obtained from food scraps, but during my BA in Fashion and Costume Design I had the time to strengthen my skills and test many different dyeing techniques, and different ways of folding the fabric to obtain different patterns. From there the research has never really stopped, and today I use natural colours not only on textiles but also to colour the bioplastics I make.",
     "What fascinates me most is how natural dyes can change colour just through a shift in pH. Red cabbage is the classic example: the same purple liquid turns pink when you add lemon juice and blue or green when you add baking soda. Nothing is added to the pigment itself, it simply responds to its environment, and I find it really fascinating.",
-    "In June 2026 I was invited to the Gentler Future Festival organized By The End of May to lead a workshop on natural dyes and biomaterials. Below you can see some of my work."
+    "In June 2026 I was invited to the Gentler Futures Festival, organised by The End of May to lead a workshop on natural dyes and biomaterials. Below you can see some of my work."
     ],
     images: ["images/project/projectwo-1.jpg", "images/project/projectwo-2.jpg", "images/project/projectwo-3.jpg", "images/project/projectwo-4.jpg", "images/project/projectwo-5.jpg", "images/project/projectwo-6.jpg"]
   },
@@ -40,7 +40,7 @@ description: [
     description: [
       "My biomaterial research began with my BA thesis, and since then I have never stopped. I started by experimenting with open source recipes, and by testing them again and again I learned the properties of the materials: how they dry, how they take colour, how they hold together.",
       "Today it is an ongoing practice. I work with bioplastics, biocomposites and bioceramics made from natural ingredients, coloured with natural dyes, and I keep testing and documenting the results between Rome, Barcelona and Berlin.",
-      "If you want to know more about it, or you are interested in a consultancy, <a href='index.html#contacts'>contact me</a>. Below you can see some of my work."
+      "If you want to know more about it, or you are interested in a consultancy, <a href='contact.html'>contact me</a>. Below you can see some of my work."
     ],
     images: ["images/project/projecthree-1.jpg", "images/project/projecthree-2.jpg", "images/project/projecthree-3.jpg", "images/project/projecthree-4.jpg", "images/project/projecthree-5.jpg", "images/project/projecthree-6.jpg"]
   }
