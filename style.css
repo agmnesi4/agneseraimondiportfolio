@@ -103,6 +103,7 @@ section.blk{
 }
 .body p{max-width:60ch;margin-bottom:1em;font-size:16px}
 .body p:last-child{margin-bottom:0}
+.body p a{text-decoration:underline;text-underline-offset:3px}
 
 /* Contents */
 .toc ol{list-style:none}
